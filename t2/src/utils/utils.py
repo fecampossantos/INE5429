@@ -1,7 +1,7 @@
 import time
 
 """
-This function calls the received algorithm 'reps' times and calculate the
+This function calls the received algorithm (alg) 'reps' times and calculate the
 time to run.
 """
 def generate(alg, reps):

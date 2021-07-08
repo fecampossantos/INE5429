@@ -9,7 +9,7 @@ primitive roots modulo n = 5, 10, 11, 13, 15, 19, 20, 22, 23, 26, 29, 30, 31, 33
 order = 46
 """
 
-# chosen by the author, not sure if good enough
+# primarily chosen by the author, not good enough
 # _PRIMITIVE_ROOT = 41
 # _MOD = 47
 

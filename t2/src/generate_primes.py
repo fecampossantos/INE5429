@@ -27,8 +27,6 @@ def main():
             leh = Lehmer(_SEED, size)
             leh.calculate()
             isPrime = fermat(leh.num)
-            if rounds % 10000 == 0:
-                print('...')
         total = time.time() - start
         print('it took ', rounds,' rounds and ',total,'s to find a prime number of size ', size)
         print('number generated:')

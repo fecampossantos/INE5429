@@ -1,5 +1,5 @@
-import random
 # https://en.wikipedia.org/wiki/Fermat_primality_test
+import random
 
 """ :returns true if n is probably prime, false otherwise
 :param n -> number to be tested
@@ -15,7 +15,6 @@ def fermat(n, k=100):
         return False
 
     # Now, following wikipedia's pseudocode:
-
     # Repeat k times:
     for _ in range(k):
     # Pick 'a' randomly in the range[2, n − 2]
@@ -23,5 +22,5 @@ def fermat(n, k=100):
     # If a^(n - 1) % n != 1, then return 'composite'
         if pow(a, n - 1, n) != 1:
             return False
-    # If composite is never returned, return 'probably prime'
+    # If composite is never returned (after k iterations), return 'probably prime'
     return True

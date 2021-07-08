@@ -33,7 +33,7 @@ def miller_rabin(n, k=100):
             continue
         # repeat r − 1 times:
         for _ in range(r - 1):
-            # x ← x^2 mod n
+            # x = x^2 mod n
             x = pow(x, 2, n)
             # if x = n − 1 then continue WitnessLoop
             if x == n - 1:
