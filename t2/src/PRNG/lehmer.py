@@ -45,14 +45,20 @@ class Lehmer:
         return self.num
 
     """
-    runs the algorithm 'size' times, each time it runs using 
+    runs the algorithm (size - 1) times, each time it runs using 
     the last seed (saved in num), receives the result and appends
     the least significant digit to the result, creating
-    a binary result of the desired size
+    a binary result of the desired size.
+    It starts with 1 in the beginning (this will make sure
+    that the number has 'size' bits)
+    
+    This method of making sure of the size is based in the implementation
+    of Blum-Blum-Shub from Jeremy Kun
+    https://jeremykun.com/2016/07/11/the-blum-blum-shub-pseudorandom-generator/
     """
     def calculate(self):
-        result = ""
-        for _ in range(self.size):
+        result = "1"
+        for _ in range(self.size - 1):
             rnd = self.algorithm()
             b = rnd % 2
             result += str(b)
